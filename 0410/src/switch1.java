@@ -3,24 +3,24 @@ public class switch1 {
 
 	public static void main(String[] args) {
 		java.util.Scanner sc = new java.util.Scanner(System.in);
-		System.out.println("ÇÚµåÆù¼±ÅÃ(a-°¶·°½Ã b-¾ÆÀÌÆù c- È­¿þÀÌ)");
+		System.out.println("ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(a-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ b-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ c- È­ï¿½ï¿½ï¿½ï¿½)");
 		final String SAMSUNG = "a";
-		final String APPLE = "b";
+		final String APLE = "b";
 		final String HWAWEI = "c";
 		String phone = sc.nextLine();
 
 		switch (phone) {
 		case SAMSUNG:
-			System.out.println("°¶·°½Ã");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			break;
-		case APPLE:
-			System.out.println("¾ÆÀÌÆù");
+		case APLE:
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			break;
 		case HWAWEI:
-			System.out.println("È­¿þÀÌ");
+			System.out.println("È­ï¿½ï¿½ï¿½ï¿½");
 			break;
 		default:
-			System.out.println("Àß¸øµÈ ¼±ÅÃ");
+			System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
 		}
 		
