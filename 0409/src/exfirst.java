@@ -4,18 +4,18 @@ public class exfirst {
 	public static void main(String[] args) {
 		java.util.Scanner cs = new java.util.Scanner(System.in);
 
-		System.out.println("Á¡¼ö:");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½:");
 
 		int score = cs.nextInt();
 
-		System.out.println("score:" + score);
-		// Á¡¼ö¸¦ ÀÔ·Â¹Þ°í
+		System.out.println("sore:" + score);
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Þ°ï¿½
 
 		if (score >= 60) {
-			System.out.println("ÇÕ°Ý");
+			System.out.println("ï¿½Õ°ï¿½");
 		}
 
-		System.out.println("Á¾·á");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 
 		cs.close();
 
