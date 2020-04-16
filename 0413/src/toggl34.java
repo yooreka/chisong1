@@ -10,22 +10,20 @@ public class toggl34 {
 					System.out.print(" ");
 				}
 
-			}
-			for (int j = 0; j <= i; j = j + 1) {
-				System.out.print("*");
+				for (int j = 0; j <= i; j = j + 1) {
+					System.out.print("*");
 
+				}System.out.print("\n");
+			} else {
+				for (int k = 0; k <= i - 1; k = k + 1) {
+					System.out.print(" ");
 				}
-			
-				{for(int h = 0; h <= i - 1; h = h + 1){
-				System.out.print(" ");
-			}
-			for (int h = 0; h <= 3 - i; h = h + 1) {
-				System.out.print("*");
+				for (int k = 0; k <= 4 - i; k = k + 1) {
+					System.out.print("*");
+				}
+				System.out.print("\n");
 			}
 		}
-		System.out.print("\n");
-
-		}
+		
 	}
 }
-
