@@ -27,9 +27,14 @@ public class Main {
 	  System.out.println(System.identityHashCode(s1));
 	  System.out.println(System.identityHashCode(s2));
 	
-	Singleton.sharedInstance().anywhereshare = "singleton";
+	Singleton.sharedInstance().anywhereshare = "Singleton";
 	
 	Parent p = new Parent();
+	System.out.println(Thread.MAX_PRIORITY);
+	
+	int result = Math.max(20, 30);
+	System.out.println(result);
+	
 	}
 	
 	
