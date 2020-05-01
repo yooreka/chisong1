@@ -1,0 +1,133 @@
+**Set
+=>데이터를 중복 없이 저장하는 자료구조
+=>중복된 데이터를 삽입하면 삽입하지 않습니다.
+=>데이터를 빠르게 조회할 수 있도록 해싱을 이용해서 저장
+=>자바에서는 Set은 인터페이스이고 데이터의 저장 순서를 알 수 없는 HashSet, 데이터의 저장 순서를 기억하는 LinkedHashSet 그리고 데이터를 오름차순 정렬해서 저장하고 있는 TreeSet 클래스로 구현되어 있습니다.
+=>데이터를 삽입할 때 add 메소드를 사용하는데 이 메소드가 boolean 값을 리턴해서 삽입에 성공하면 true 그렇지 않으면 false를 리턴합니다.
+       
+
+**Map(Dictionary)
+=>데이터를 Key 와 Value 쌍으로 저장하는 자료구조
+=>Key와 Value 모두 모든 자료형이 가능하지만 Key는 일반적으로 문자열로 만듭니다.
+=>데이터를 저장하는 용도의 Class 대신에 사용
+=>하나의 행을 저장하는 용도로 사용
+=>관계형 데이터베이스(SQL 사용)는 Class 를 이용한 인스턴스의 집합이고 NoSQL 이라고 부르는 데이터베이스는 Map 의 List입니다.
+=>Key는 중복된 데이터를 허용하지 않습니다.
+=>Map은 인터페이스이고 HashMap, LinkedHashMap, TreeMap 클래스로 구현되어 있습니다.
+HashMap은 Key의 순서를 알 수 없고 LinkedHashMap은 저장한 순서를 기억하고 TreeMap은 key를 오름차순 정렬합니다.
+
+1.생성
+new HashMap<Key의 자료형, Value의 자료형>()
+
+2.데이터 저장
+void put(Key, Value)
+=>없는 Key를 사용하면 데이터가 삽입되고 존재하는 Key를 이용하면 데이터는 수정됩니다.
+
+3.데이터 가져오기
+Object get(Key)
+=>없는 Key를 사용하면 null이 리턴됩니다.
+
+4.데이터 삭제
+remove(Key)
+put(Key, null)
+
+5.모든 Key 값 가져오기
+Set<Key의 자료형> keySet()
+
+6.toString이 재정의 되어 있는데 key 와 value의 toString을 호출해서 하나로 결합해서 리턴
+
+**MVC(Model View Controller)
+=>Model: Business Logic을 이용해서 데이터를 생성해내는 부분
+=>View: 데이터를 출력하는 부분
+=>Controller: Model 과 View를 연결시켜 주는 부분
+
+**랜덤 클래스
+=>java.util.Random
+
+**날짜 관련 클래스
+=>java.util.Date, java.sql.Date, java.util.Calendar, java.util.GreogorianCalendar
+1.java.util.Date
+=>날짜와 시간을 저장하는 클래스
+=>1970년 1월 1일 자정(epoch time)으로부터 지나온 시간을 가지고 날짜를 표현
+=>년도는 1900으로 지나온 년도 수로 설정하고 월은 0부터 시작 일은 우리가 사용하는 일과 동일
+1)생성자
+Date(): 현재 날짜 및 시간
+
+Date(long timeMillis): 1970년 1월 1일 자정으로 지나온 밀리초를 이용해서 생성
+
+Date(int year, int month, int day): 년도는 1900년부터 지나온 년도로 월은 0부터 일은 동일
+1986년 5월 5일 - new Date(86, 4, 5)
+
+위의 생성자에 시간과 분 그리고 시간, 분, 초를 추가해서 생성해주는 생성자도 존재
+
+2)메소드
+=>각 단위별로 가져올 수 있는 get 메소드와 설정할 수 있는 set 메소드를 소유
+=>크기 비교를 할 수 있는 compareTo 메소드가 존재
+
+2.java.sql.Date 와 java.sql.Time
+=>Date는 날짜만 Time은 시간만 저장
+=>생성자는 java.util.Date 와 유사한데 매개변수가 없는 생성자(Default Constructor)가 없습니다.
+
+3.java.util.Calendar
+=>Date 에 비해서 정확한 날짜 및 시간 설정이 가능한 클래스 - 추상 클래스
+=>getInstance() 라는 static 메소드를 이용해서 인스턴스를 생성 - 현재 날짜 및 시간으로 생성
+=>get 메소드와 set 메소드를 가지고 있는데 매개변수로 Calendar의 상수를 설정해서 원하는 항목을 가져오거나 설정할 수 있습니다.
+=>getTimeInMillis()를 이용해서 epoch time 을 리턴
+
+4.java.util.GregorianCalendar
+=>Calendar의 하위 클래스
+=>매개변수가 없는 생성자와 매개변수가 있는 생성자를 이용해서 인스턴스를 생성하는 것이 가능
+=>월은 0부터 시작, 년도나 일은 우리가 사용하는 형태로 설정
+
+**Format 클래스
+=>날짜 나 숫자 데이터를 특정 포맷에 맞는 문자열로 변환해주는 클래스
+=>java.text 패키지에 존재
+1.SimpleDateFormat
+=>날짜를 문자열로 변환해주는 클래스
+1)생성자
+SimpleDateFormat("날짜 서식")
+
+2)문자열로 변환
+String format(Date date)
+
+2.DecimalFormat
+=>숫자를 원하는 형식의 문자열로 변환해주는 클래스
+
+3.ChoiceFormat
+=>구간에 해당하는 문자열을 리턴해주는 클래스
+=>double 배열과 String 배열을 이용
+
+4.MessageFormat
+=>문자열을 보간하는 클래스
+"이름:{0}" , "박문석"
+
+**연습문제
+=>완전수 : 자신을 제외한 약수의 합이 자기 자신인 수
+6 : 1,2,3,6 => 1+2+3은 6 따라서 완전수
+2부터 1000까지 완전수의 개수 구하기 : 3개
+
+1.노래 제목을 저장할 수 있는 배열 또는 ArrayList를 만들어서 노래 제목을 저장하고 순서대로 출력 - 열 만들기
+
+2.가수이름과 노래제목을 하나로 묶어서 저장할 수 있는 클래스 또는 Map을 생성해서 데이터를 저장하고 이러한 데이터를 여러 개 만들어서 List 나 배열에 저장하고 출력 - 테이블 만들기
+
+3.노래 제목 배열들을 만드는데 장르별(트로트, 힙합, 락)로 생성
+만들어진 배열과 장르를 Map(별도의 클래스를 생성)으로 묶어서 배열이나 리스트로 만들고 출력 - 분류된 데이터
+
+4.야놀자는 큰 지역으로 구분하고 다시 작은 지역으로 구분하고 그 안에 데이터를 저장하는 구조입니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

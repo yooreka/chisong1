@@ -14,29 +14,12 @@ public class MapMain2 {
 		// 이차원배열생성
 		// 배열에는 비교가 가능한 데이터만 저장하기 때문에 데이터이외의 정보를 저장하지 못해서 이차원 배열을 이용하는 배열의 특성을 출력불가
 		String[][] players = { huston, toronto, la, boston };
-		for (int i = 0; i < players.length; i++) {
-			// 팀이름출력
-			if (i == 0) {
-				System.out.printf("%5s", "huston:");
-			} else if (i == 1) {
-				System.out.printf("%5s", "toronto:");
-
-			} else if (i == 2) {
-				System.out.printf("%5s", "la:");
-
-			} // 각 팀의 선수명단
-			String[] temp = players[i];
-			for (String imsi : temp) {
-				System.out.printf("%7s", imsi);
-			}
-
-			System.out.printf("\n");
-
+	
 			// 배열을 하나로 묶어 줄 대는 Map을 만들어서 배열의 특징과 데이터를 저장하고 Map의 배열을 만들어주는게 좋음
 			HashMap<String, Object> map1 = new HashMap<String, Object>();
 			map1.put("team", "huston");
 			map1.put("player", huston);
-
+  
 			HashMap<String, Object> map2 = new HashMap<String, Object>();
 			map2.put("team", "toronto");
 			map2.put("player", toronto);
@@ -60,4 +43,4 @@ public class MapMain2 {
 
 	}
 
-}
+
