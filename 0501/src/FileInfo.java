@@ -15,7 +15,7 @@ public class FileInfo {
 		//파일의 크기 확인
 		long length = file.length();
 		System.out.println(length/1024 + "KB");
-		
+	
 	}
 
 }
