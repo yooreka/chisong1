@@ -30,7 +30,7 @@ public class MovieDTOMain {
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(today + ".dat"))) {
         	
         	//파일에 기록
-        	oos.writeObject(list);
+        	oos.writeObject(list); 
         }catch(Exception e) {}
 	
 	
