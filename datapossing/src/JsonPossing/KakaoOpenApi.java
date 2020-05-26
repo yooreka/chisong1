@@ -34,7 +34,7 @@ public class KakaoOpenApi {
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setConnectTimeout(30000);
 			con.setUseCaches(false);
-			// 헤더 설정
+		 
 			con.addRequestProperty("Authorization", "KakaoAK 645636d460f17eeeb8245fa44a436f86");
 			// 문자열 읽어오기
 			StringBuilder sb = new StringBuilder();
