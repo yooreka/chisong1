@@ -18,8 +18,8 @@ public class MapMain1 {
 	   //데이터 수정
 	    map.put("title", "note");
 	    System.out.println(map.get("title"));
-	    
-	    //데이터삭제
+	    System.out.println(map.values());
+	   //데이터삭제
 	    map.remove("title");
 	    System.out.println(map);
 	    //Map의 전체 데이터 순회

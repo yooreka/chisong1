@@ -16,7 +16,7 @@ public class MovieDTOMain {
         ArrayList<MovieDTO> list = new ArrayList<>(); 
         list.add(obj1);
         list.add(obj2);
-	
+      System.out.println(list);
 	//오늘 날짜를 문자열로 만들기
         Date date = new Date();
         //날짜를 원하는 포맷의 문자열로 만들어주는 인스턴스
